@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 import { createClient } from '@supabase/supabase-js';
-import Navbar from '../../../components/Navbar';
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL,
@@ -50,15 +49,3 @@ export default function Dashboard() {
     </div>
   );
 }
-
-export default function Dashboard() {
-    return (
-      <div>
-        <Navbar />
-        <div className="flex flex-col items-center justify-center min-h-screen p-4 bg-gray-100">
-          <h1 className="text-2xl font-bold mb-4">Dashboard</h1>
-          <p>Welcome to ASJ Backpackers!</p>
-        </div>
-      </div>
-    );
-  }
